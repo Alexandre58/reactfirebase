@@ -6,12 +6,12 @@ import "firebase/compat/auth";
 
 // Your web app's Firebase configuration
 const app = (firebase.initializeApp = {
-  apiKey: "AIzaSyAUMPeUqZ7IvVHofk8IheVwtBKgRpb8Hds",
-  authDomain: "react-redux-7c81a.firebaseapp.com",
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAINE,
   projectId: "react-redux-7c81a",
   storageBucket: "react-redux-7c81a.appspot.com",
-  messagingSenderId: "783080288887",
-  appId: "1:783080288887:web:a3107369a20f0dfa948c72",
+  messagingSenderId: process.env.MESAGERID,
+  appId: process.env.APPID,
 });
 
 export const auth = app.auth();
