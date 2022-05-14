@@ -8,8 +8,8 @@ import "firebase/compat/auth";
 const app = (firebase.initializeApp = {
   apiKey: process.env.APIKEY,
   authDomain: process.env.AUTHDOMAINE,
-  projectId: "react-redux-7c81a",
-  storageBucket: "react-redux-7c81a.appspot.com",
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
   messagingSenderId: process.env.MESAGERID,
   appId: process.env.APPID,
 });

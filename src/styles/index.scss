@@ -3,3 +3,18 @@
 @import "./_modalInscription.scss";
 @import "./signUp.scss";
 @import "./login.scss";
+
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        list-style-type: none;
+    }
+}
