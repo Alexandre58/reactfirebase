@@ -3,12 +3,16 @@
 @import "./_modalInscription.scss";
 @import "./signUp.scss";
 @import "./login.scss";
+@import "./app.scss";
+@import "./creatPost.scss";
 
 
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: 1px black dashed;
+    height: 100vh;
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
         padding: 0;

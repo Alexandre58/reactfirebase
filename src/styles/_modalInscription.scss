@@ -1,8 +1,18 @@
 .Modal_container {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 900px;
     border: 2px dashed black;
     .modal_container_btn button {
         color: white;
-       
+      
+
+    }
+    .modal_inscrire, .modal_seConnecter {
+        border: 5px solid rgb(249, 249, 247);
+        padding: 1em;
     }
 }

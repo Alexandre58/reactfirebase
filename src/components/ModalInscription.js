@@ -8,21 +8,21 @@ const ModalInscription = () => {
     <div className="Modal_container">
       <div className="modal_container_btn">
         <button
-          style={{ background: signUp ? "rgb(28,28,28)" : "rgb(23,23,23)" }}
+          style={{ background: signUp ? "rgb(28,28,28)" : "rgb(216,216,216)" }}
           onClick={() => setSignUp(true)}
           className="modal_inscrire"
         >
           S'incrire
         </button>
         <button
-          style={{ background: signUp ? "rgb(23,23,23)" : "rgb(28,28,28)" }}
+          style={{ background: signUp ? "rgb(216,216,216)" : "rgb(28,28,28)" }}
           onClick={() => setSignUp(false)}
           className="modal_seConnecter"
         >
           Se Connecter
         </button>
       </div>
-      {signUp ? <SignUp /> : <Login />}
+      <div>{signUp ? <SignUp /> : <Login />}</div>
     </div>
   );
 };

@@ -1,8 +1,32 @@
 .signUp_container {
-    border: 2px rgb(227, 15, 15) solid;
     padding: 2em;
+    max-width: 400px;
+    background-color: rgb(47, 46, 46);
+    border-radius: 15px;
     .signUp_H1 {
-        color: rgb(29, 3, 3);
+        color: rgba(203, 201, 201, 0.631);
+    }
+    .signup_container_form, fieldset {
+        display: flex;
+        flex-direction: column;
+        color: rgba(203, 201, 201, 0.631);
+        padding: 1.5em;
+        row-gap: 1em;
+    }
+    input {
+        padding: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    }
+    .input_button {
+        background-color: rgb(243, 96, 96);
+        letter-spacing: 0.3em;
+        cursor: pointer;
+    }
+    .input_button:hover {
+        transform: scale(1.02);
+        background-color: rgb(248, 51, 51);
+        
     }
 }
 
