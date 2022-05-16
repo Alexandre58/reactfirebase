@@ -41,8 +41,7 @@ const App = () => {
   return (
     <>
       <header className="app_container_h1_h2">
-        <h1>Bienvenue sur notre site {user?.displayName}</h1>
-        <h2>Elaboré avec React Redux et firebase pour le backend</h2>
+        <h1>Bienvenue {user?.displayName}</h1>
       </header>
       <main className="app_container">
         <section className="app_container_user">
@@ -67,7 +66,9 @@ const App = () => {
         </section>
         <section className="app_section_container_post">
           {posts.length > 0 &&
-            posts.map((post) => <Post post={post} key={post.id} user={user} />)}
+            posts
+              .sort((a, b) => b.date - a.date)
+              .map((post) => <Post post={post} key={post.id} user={user} />)}
         </section>
       </main>
       <Footer />

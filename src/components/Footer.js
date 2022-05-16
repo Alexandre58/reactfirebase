@@ -7,7 +7,7 @@ const Footer = () => {
       <Logo />
       <ul>
         <li>&copy; CreateReactReduxFirebase</li>
-        <li>2022</li>
+        <li>05/2022</li>
       </ul>
     </div>
   );

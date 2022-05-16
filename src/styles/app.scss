@@ -11,7 +11,7 @@
 }
 
 .app_container {
-  border: 2px black dashed;
+// border: 2px black dashed;
   display: flex;
   flex-direction: column;
   row-gap: 2em;
@@ -61,6 +61,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: solid 1px black;
+    @include box_shadow_black;
+  //  border: solid 5px black;
+    row-gap: 1em;
+    column-gap: 1em;
+    border-radius: 15px;
+    margin-bottom: 100px;
+    padding: 2em 0 2em 0;
   }
 }
