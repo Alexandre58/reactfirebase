@@ -1,0 +1,15 @@
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+  //  border: dashed rgb(85, 85, 6) 2px;
+    
+    padding: 1em;
+    & h2 {
+        font-size: 0.7em;
+        color: $color_background_body;
+    }
+
+}

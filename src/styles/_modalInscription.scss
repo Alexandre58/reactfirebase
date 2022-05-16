@@ -3,16 +3,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 100px auto;
     max-width: 900px;
-    border: 2px dashed black;
+    padding: 1em;
+ //   border: 2px dashed black;
     .modal_container_btn button {
         color: white;
       
 
     }
     .modal_inscrire, .modal_seConnecter {
-        border: 5px solid rgb(249, 249, 247);
+        border: 2px solid rgb(172, 172, 169);
         padding: 1em;
+        border-radius: 15px;
+        letter-spacing: 0.5em;
+    }
+    .modal_inscrire:hover, .modal_seConnecter:hover {
+       transform: scale(1.02);
+      //padding: 1.2em;
     }
 }

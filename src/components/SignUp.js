@@ -22,6 +22,10 @@ const SignUp = () => {
         .then(async (userAuth) => {
           await userAuth.user.updateProfile({ displayName: displayName });
           console.log(userAuth);
+          {
+            /**necessité de recharger la page pour une inscription apres une deconnection d'un compte  window.location.reload();  */
+          }
+          window.location.reload();
         });
     } catch (error) {
       console.log(error);

@@ -1,21 +1,26 @@
 .createPost_container {
-    display: flex;
-    justify-content: center;
-   max-width: 600px;
-   align-items: center;
-   margin: auto;
-    border: 2px solid rgb(235, 235, 4);
-    
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  align-items: center;
+  margin: auto;
+ // border: 2px solid rgb(235, 235, 4);
+ 
 
-    .createPost_container_form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2em;
-        border: 1px solid rgb(54, 54, 15);
-        .textArea {
-            height: 100px;
-            width: 500px;
-        }
+  .createPost_container_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+ //   border: 1px solid rgb(54, 54, 15);
+    .textArea {
+      height: 200px;
+      width: 500px;
+      box-shadow: 5px 5px 15px 5px #979595;
+      margin-top: 20px;
     }
-  
+    .createPost_input {
+      background-color: rgb(82, 78, 78);
+    }
+   
+  }
 }
