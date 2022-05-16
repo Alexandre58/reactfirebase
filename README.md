@@ -1,5 +1,11 @@
 # Getting Started with Create React App redux and firebase
 
+---
+
+Creation reseau social avec firebase react et redux , scss
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
