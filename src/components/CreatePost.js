@@ -5,7 +5,7 @@ import { db } from "../utils/firebase.config";
 
 //uid = props recuperer de app.js dans <createPost />
 const CreatePost = ({ uid, displayName }) => {
-  console.log("uid et displayName =>" + uid, displayName);
+  // console.log("uid et displayName =>" + uid, displayName);
   //useRef( methode pour recuperer le message de l'utilisateur)
   const message = useRef();
   //function form preventdefault pour ne pas recharger la page
@@ -24,9 +24,9 @@ const CreatePost = ({ uid, displayName }) => {
     //ensuite on vide le formulaire
     message.current.value = "";
     //ce console.log montre les element envoyé du message
-    console.log("*****ci dessous envoyé de createPost.js******");
-    console.log(data);
-    console.log("*****ci dessus envoyé de createPost.js******");
+    // console.log("*****ci dessous envoyé de createPost.js******");
+    // console.log(data);
+    // console.log("*****ci dessus envoyé de createPost.js******");
   };
 
   return (

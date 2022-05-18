@@ -9,9 +9,14 @@ import { collection, getDocs } from "firebase/firestore";
 import Post from "./components/Post";
 
 const App = () => {
-  //nous sommes connecté ou pas ? est-ce bien le bon user connecté ?  //onAuthStateChanged() est une methode de firebase
+  //nous sommes connecté ou pas ? est-ce bien le bon user connecté ?  //onAuthStateChanged() est une methode de firebase****
   const [user, setUser] = useState(null);
-  //recupération des messages des utilisateurs
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+  //fin de onAuthStateChanged()*********************************************************************************************
+
+  //recupération des messages des utilisateurs******************************************************************************
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     //methode getDocs chercher ou ? (collection) (db) (posts)=> map doc.data//le tout stoker dans setPosts //remplacer setPosts par console.log pour verifier
@@ -19,11 +24,7 @@ const App = () => {
       setPosts(res.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
     );
   }, []);
-
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-  //fin de onAuthStateChanged()
+  // fin de recupération des messages des utilisateurs******************************************************************************
 
   //se deconnecter avec la methode signOut() de firebase
   const handleLogout = async () => {
@@ -48,7 +49,7 @@ const App = () => {
           {user && (
             <div className="app_container_h3_button">
               <span>{user?.displayName[0]}</span>
-              <h3>{user?.displayName}</h3>
+              <h3>Créer ton message ici {user?.displayName}</h3>
               <button
                 className="app_button_seDeconnecter"
                 onClick={() => handleLogout()}

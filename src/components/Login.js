@@ -20,12 +20,12 @@ const Login = () => {
         loginEmail.current.value,
         loginPassword.current.value
       );
-      console.log(user);
+      // console.log(user);
     } catch (error) {
       setError(true);
       console.log(error.message);
     }
-    console.log(loginEmail.current.value, loginPassword.current.value);
+    //console.log(loginEmail.current.value, loginPassword.current.value);
   };
   return (
     <div className="login_container">

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import { db } from "../utils/firebase.config";
+import { doc, updateDoc } from "firebase/firestore";
+import Delete from "./Delete";
+import CommentPost from "./CommentPost";
 const Post = ({ post, user }) => {
   //edit d'une modale pour ouvrir un nouveau message dans le message
   const [edit, setEdit] = useState(false);
@@ -19,24 +22,35 @@ const Post = ({ post, user }) => {
     }
   };
 
+  //modif des messages avec la methode updateDoc()
+  const handleEdit = () => {
+    debugger;
+    setEdit(false);
+    if (editMess) {
+      updateDoc(doc(db, "posts", post.id), { message: editMess });
+    }
+  };
+
   return (
     <article className="post_article_container">
       <div className="post_article_header">
         <span className="post_span">{post.author[0]}</span>
-        <h2 className="post_h2">{post.author}</h2>
+        <h2 className="post_h2">Message de {post.author}</h2>
         {/**If edit est sur true tu met false ect.. setEdit(!edit) */}
-        <p onClick={() => setEdit(!edit)} className="post_edit">
-          Edit
-        </p>
+        {post.authorId === user?.uid && (
+          <p onClick={() => setEdit(!edit)} className="post_edit">
+            Edit
+          </p>
+        )}
       </div>
       {edit ? (
         <>
           <textarea
             autoFocus
-            value={editMess ? editMess : post.message}
+            defaultValue={editMess ? editMess : post.message}
             onChange={(e) => setEditMess(e.target.value)}
           ></textarea>
-          <button onClick={() => setEdit(false)} className="post_button_edit">
+          <button onClick={() => handleEdit()} className="post_button_edit">
             Modifier ce message
           </button>
         </>
@@ -47,10 +61,10 @@ const Post = ({ post, user }) => {
       <div className="post_container_date_spanDelete">
         <h3 className="post_h3_date">Posté {dateFormater(post.date)}</h3>
         {/**si l'utilisateuer peut ou pas delete un message */}
-        {post.authorId === user?.uid && (
-          <span className="post_span_delete">Delete</span>
-        )}
+        {post.authorId === user?.uid && <Delete postId={post.id} />}
       </div>
+      {/*que va transmettre CommentPost? => post={post} donc son contenu car "comment" est dans post et il va falloir faire une mise a jou pour que cela fonctionne */}
+      <CommentPost post={post} />
     </article>
   );
 };

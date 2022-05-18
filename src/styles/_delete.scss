@@ -1,0 +1,12 @@
+.post_span_delete {
+    font-size: 0.7em;
+    color: $color_text;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 15px;
+  }
+
+  .post_span_delete:hover {
+
+      border: 1px solid white;
+  } 
